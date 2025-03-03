@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 //import java.time.Duration;
 /**
  * Hello world!
@@ -14,12 +16,18 @@ public class App {
     	
     	
 //adding headless browser options to sync to Ubuntu
-    	ChromeOptions options=new ChromeOptions();
+    	//System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+    	
+    	ChromeOptions options = new ChromeOptions();
+    	//options.addArguments("user-data-dir=C:\\Users\\madhu\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
+    	 	
     	options.addArguments("--headless");
     	
     	WebDriver driver = new ChromeDriver(options);
     	
-    	driver.get("http://18.188.205.172:8082/contact.html");
+    	//WebDriverManager.chromedriver().setup();
+    	//driver = new ChromeDriver();
+    	driver.get("http://3.142.83.130:8082/contact.html");
     	
     	Thread.sleep(2000);
         System.out.println(driver.getTitle());
