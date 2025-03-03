@@ -19,7 +19,7 @@ public class App {
     	
     	WebDriver driver = new ChromeDriver(options);
     	
-    	driver.get("http://52.15.99.215:8082/contact.html");
+    	driver.get("http://18.188.205.172:8082/contact.html");
     	
     	Thread.sleep(2000);
         System.out.println(driver.getTitle());
@@ -42,7 +42,7 @@ public class App {
          submitButton.click();
          Thread.sleep(2000);
         WebElement displaymessage = driver.findElement(By.id("response"));
-        displaymessage.getText();
+        System.out.println(displaymessage.getText());
         Thread.sleep(2000);
         Thread.sleep(2000);
         if(displaymessage.getText().equalsIgnoreCase("Message Sent"))
