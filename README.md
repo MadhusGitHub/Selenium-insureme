@@ -1,1 +1,1 @@
-Insurance project
+Insurance capstone project
